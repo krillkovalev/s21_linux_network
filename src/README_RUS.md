@@ -115,11 +115,15 @@
 ![Alt Text](src/pictures/19.png)
 ![Alt Text](src/pictures/20.png)
 
-##### Командой `ip -4 a` проверь, что адрес машины задан верно. Также пропингуй ws22 с ws21. Аналогично пропинговать r1 с ws11.
+- `ip -4 a` проверить, что адрес машины задан верно
 ![Alt Text](src/pictures/21.png)
 ![Alt Text](src/pictures/22.png)
 ![Alt Text](src/pictures/23.png)
 ![Alt Text](src/pictures/24.png)
+
+- Пинг ws22 с ws21. Аналогично пингуем r1 с ws11.
+![Alt Text](src/pictures/25.png)
+![Alt Text](src/pictures/26.png)
 
 #### 5.2. Включение переадресации IP-адресов
 ##### Для включения переадресации IP, выполни команду на роутерах:
