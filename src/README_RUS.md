@@ -69,10 +69,10 @@
 
 - Измененный файл *etc/netplan/00-installer-config.yaml*.
 
-![Alt Text](src/pictures/10.png)
+![Alt Text](src/pictures/10.jpg)
 
 - Пингуем соединение между ws1 и ws2
-![Alt Text](src/pictures/11.png)
+![Alt Text](src/pictures/11.jpg)
 
 ## Part 3. Утилита **iperf3**
 
@@ -83,33 +83,37 @@
 #### 3.2. Утилита **iperf3**
 ##### Измерь скорость соединения между ws1 и ws2.
 
-- На ws1 пишем команду ``sudo iperf3 -s`` на ws2   ``sudo iperf3 -c 192.168.100.10``
-![Alt Text](src/pictures/12.png)
+- На ws1 пишем команду ``sudo iperf3 -s`` на ws2 ``sudo iperf3 -c 192.168.100.10``
+![Alt Text](src/pictures/12.jpg)
 
 ## Part 4. Сетевой экран
 
 #### 4.1. Утилита **iptables**
 
 - Создаем файл ``/etc/firewall.sh`` и заполняем в соответствии с заданием
-![Alt Text](src/pictures/13.png)
+![Alt Text](src/pictures/13.jpg)
 
 
 - Запускаем файл на ws1 и ws2
-![Alt Text](src/pictures/14.png)
+![Alt Text](src/pictures/14.jpg)
 
 - Разница между стратегиями заключается в том, что в первом файле первым подходящим правилом для пакета является запрет, а во втором - разрешение. Применяется только первое подходящее правило, остальные игнорируются.
 
 #### 4.2. Утилита **nmap**
 
 - Команда ``ping`` и ``nmap`` 
-![Alt Text](src/pictures/15.png)
+![Alt Text](src/pictures/15.jpg)
 
 ## Part 5. Статическая маршрутизация сети
 
 #### 5.1. Настройка адресов машин
 
 - Скрины с содержанием файла *etc/netplan/00-installer-config.yaml* для каждой машины.
-
+![Alt Text](src/pictures/16.png)
+![Alt Text](src/pictures/17.png)
+![Alt Text](src/pictures/18.png)
+![Alt Text](src/pictures/19.png)
+![Alt Text](src/pictures/20.png)
 
 ##### Перезапусти сервис сети. Если ошибок нет, то командой `ip -4 a` проверь, что адрес машины задан верно. Также пропингуй ws22 с ws21. Аналогично пропингуй r1 с ws11.
 - В отчёт помести скрины с вызовом и выводом использованных команд.
