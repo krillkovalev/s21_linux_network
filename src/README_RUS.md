@@ -6,28 +6,28 @@
 
 - вводим команду ipcalc ``192.167.38.54/13`` узнаем адрес сети
 
-![Alt Text](https://repos.21-school.ru/students/DO2_LinuxNetwork.ID_356275/felicidd_student.21_school.ru/DO2_LinuxNetwork-1/-/blob/develop/src/pictures/1.png)
+![Alt Text](src/pictures/1.png)
 
 ##### 2) Перевод маски *255.255.255.0* в префиксную и двоичную запись, */15* в обычную и двоичную, *11111111.11111111.11111111.11110000* в обычную и префиксную
 
 - вызываем команду ``ipcalc 255.255.255.0 | grep -e Adress: -e Netmask:`` двоичная запись: 11111111.11111111.11111111.00000000
 префиксная: 24
 
-![Alt Text](https://repos.21-school.ru/students/DO2_LinuxNetwork.ID_356275/felicidd_student.21_school.ru/DO2_LinuxNetwork-1/-/blob/develop/src/pictures/2.png)
+![Alt Text](src/pictures/2.png)
 
 - /15 в обычной: 255.254.0.0 в двоичной: 11111111.11111110.00000000.00000000 ``ipcalc 0.0.0.0/15 | grep -e Netmask:``
 
-![Alt Text](https://repos.21-school.ru/students/DO2_LinuxNetwork.ID_356275/felicidd_student.21_school.ru/DO2_LinuxNetwork-1/-/blob/develop/src/pictures/3.png)
+![Alt Text](src/pictures/3.png)
 
 - перевод *11111111.11111111.11111111.11110000* в обычной: 255.255.255.240 в префиксной: /28
 
-![Alt Text](https://repos.21-school.ru/students/DO2_LinuxNetwork.ID_356275/felicidd_student.21_school.ru/DO2_LinuxNetwork-1/-/blob/develop/src/pictures/4.png)
+![Alt Text](src/pictures/4.png)
 
 ##### 3) Минимальный и максимальный хост в сети *12.167.38.4* при масках: */8*, *11111111.11111111.00000000.00000000*, *255.255.254.0* и */4*
 
 -Минимальный и максимальный хост в сети *12.167.38.4* с указанными выше масками
 
-![Alt Text](https://repos.21-school.ru/students/DO2_LinuxNetwork.ID_356275/felicidd_student.21_school.ru/DO2_LinuxNetwork-1/-/blob/develop/src/pictures/5.png)
+![Alt Text](src/pictures/5.png)
 
 #### 1.2. localhost
 ##### Определи и запиши в отчёт, можно ли обратиться к приложению, работающему на localhost, со следующими IP: *194.34.23.100*, *127.0.0.2*, *127.1.0.1*, *128.0.0.1*
@@ -49,30 +49,30 @@
 
 - ``ip a`` для машин ws1 и ws2
 
-![Alt Text](https://repos.21-school.ru/students/DO2_LinuxNetwork.ID_356275/felicidd_student.21_school.ru/DO2_LinuxNetwork-1/-/blob/develop/src/pictures/6.png)
+![Alt Text](src/pictures/6.jpg)
 
 ##### Опиши сетевой интерфейс, соответствующий внутренней сети, на обеих машинах и задать следующие адреса и маски: ws1 - *192.168.100.10*, маска */16*, ws2 - *172.24.116.8*, маска */12*.
 
-![Alt Text](https://repos.21-school.ru/students/DO2_LinuxNetwork.ID_356275/felicidd_student.21_school.ru/DO2_LinuxNetwork-1/-/blob/develop/src/pictures/7.png)
+![Alt Text](src/pictures/7.jpg)
 
 ##### Выполни команду `netplan apply` для перезапуска сервиса сети.
-![Alt Text](https://repos.21-school.ru/students/DO2_LinuxNetwork.ID_356275/felicidd_student.21_school.ru/DO2_LinuxNetwork-1/-/blob/develop/src/pictures/8.png)
+![Alt Text](src/pictures/8.jpg)
 
 #### 2.1. Добавление статического маршрута вручную
 ##### Добавь статический маршрут от одной машины до другой и обратно при помощи команды вида `ip r add`.
 
 - Добавили статический маршрут и пропинговали
-![Alt Text](https://repos.21-school.ru/students/DO2_LinuxNetwork.ID_356275/felicidd_student.21_school.ru/DO2_LinuxNetwork-1/-/blob/develop/src/pictures/9.png)
+![Alt Text](src/pictures/9.jpg)
 
 #### 2.2. Добавление статического маршрута с сохранением
 - перезагружаем ws1 и ws2 с помощью ``sudo reboot``
 
 - Измененный файл *etc/netplan/00-installer-config.yaml*.
 
-![Alt Text](https://repos.21-school.ru/students/DO2_LinuxNetwork.ID_356275/felicidd_student.21_school.ru/DO2_LinuxNetwork-1/-/blob/develop/src/pictures/10.png)
+![Alt Text](src/pictures/10.png)
 
 - Пингуем соединение между ws1 и ws2
-![Alt Text](https://repos.21-school.ru/students/DO2_LinuxNetwork.ID_356275/felicidd_student.21_school.ru/DO2_LinuxNetwork-1/-/blob/develop/src/pictures/11.png)
+![Alt Text](src/pictures/11.png)
 
 ## Part 3. Утилита **iperf3**
 
@@ -84,40 +84,33 @@
 ##### Измерь скорость соединения между ws1 и ws2.
 
 - На ws1 пишем команду ``sudo iperf3 -s`` на ws2   ``sudo iperf3 -c 192.168.100.10``
-![Alt Text](https://repos.21-school.ru/students/DO2_LinuxNetwork.ID_356275/felicidd_student.21_school.ru/DO2_LinuxNetwork-1/-/blob/develop/src/pictures/12.png)
+![Alt Text](src/pictures/12.png)
 
 ## Part 4. Сетевой экран
 
 #### 4.1. Утилита **iptables**
 
 - Создаем файл ``/etc/firewall.sh`` и заполняем в соответствии с заданием
-![Alt Text](https://repos.21-school.ru/students/DO2_LinuxNetwork.ID_356275/felicidd_student.21_school.ru/DO2_LinuxNetwork-1/-/blob/develop/src/pictures/13.png)
+![Alt Text](src/pictures/13.png)
 
 
 - Запускаем файл на ws1 и ws2
-![Alt Text](https://repos.21-school.ru/students/DO2_LinuxNetwork.ID_356275/felicidd_student.21_school.ru/DO2_LinuxNetwork-1/-/blob/develop/src/pictures/14.png)
+![Alt Text](src/pictures/14.png)
 
 - Разница между стратегиями заключается в том, что в первом файле первым подходящим правилом для пакета является запрет, а во втором - разрешение. Применяется только первое подходящее правило, остальные игнорируются.
 
 #### 4.2. Утилита **nmap**
 
 - Команда ``ping`` и ``nmap`` 
-![Alt Text](https://repos.21-school.ru/students/DO2_LinuxNetwork.ID_356275/felicidd_student.21_school.ru/DO2_LinuxNetwork-1/-/blob/develop/src/pictures/15.png)
+![Alt Text](src/pictures/15.png)
 
 ## Part 5. Статическая маршрутизация сети
 
-`-` Пока что мы соединяли всего две машины, но теперь пришло время для статической маршрутизации целой сети.
-
-**== Задание ==**
-
-Сеть: \
-![part5_network](misc/images/part5_network.png)
-
-##### Подними пять виртуальных машин (3 рабочие станции (ws11, ws21, ws22) и 2 роутера (r1, r2)).
-
 #### 5.1. Настройка адресов машин
-##### Настрой конфигурации машин в *etc/netplan/00-installer-config.yaml* согласно сети на рисунке.
-- В отчёт помести скрины с содержанием файла *etc/netplan/00-installer-config.yaml* для каждой машины.
+
+- Скрины с содержанием файла *etc/netplan/00-installer-config.yaml* для каждой машины.
+
+
 ##### Перезапусти сервис сети. Если ошибок нет, то командой `ip -4 a` проверь, что адрес машины задан верно. Также пропингуй ws22 с ws21. Аналогично пропингуй r1 с ws11.
 - В отчёт помести скрины с вызовом и выводом использованных команд.
 
