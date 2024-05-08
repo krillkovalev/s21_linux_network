@@ -102,7 +102,7 @@
 #### 4.2. Утилита **nmap**
 
 - Команда ``ping`` и ``nmap`` 
-![Alt Text](src/pictures/15.jpg)
+![Alt Text](src/pictures/15.png)
 
 ## Part 5. Статическая маршрутизация сети
 
