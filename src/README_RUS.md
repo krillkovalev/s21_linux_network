@@ -237,5 +237,12 @@
 
 ## Part 8. Дополнительно. Знакомство с **SSH Tunnels**
 
-- В файле /etc/apache2/ports.conf изменяем строку ``Listen 80`` на ``Listen localhost:80``
+- Запускаем на r2 фаервол с правилами из Части 7.
+![Alt Text](src/pictures/61.png)
+
+- В файле /etc/apache2/ports.conf на ws22 изменяем строку ``Listen 80`` на ``Listen localhost:80``
 ![Alt Text](src/pictures/60.png)
+
+- Пользуемся Local TCP forwarding с ws21 до ws22, чтобы получить доступ к веб-серверу на ws22 с ws21
+-Образец команды: ``ssh -L [LOCAL_IP:]LOCAL_PORT:DESTINATION:DESTINATION_PORT [USER@]SSH_SERVER``
+![Alt Text](src/pictures/62.png)
