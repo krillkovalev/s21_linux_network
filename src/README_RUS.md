@@ -245,6 +245,7 @@
 
 - Пользуемся Local TCP forwarding с ws21 до ws22, чтобы получить доступ к веб-серверу на ws22 с ws21
 - Образец команды: ``ssh -L [LOCAL_IP:]LOCAL_PORT:DESTINATION:DESTINATION_PORT [USER@]SSH_SERVER``
+- Команда ``ssh -L 8888:10.20.0.20:80 shor@10.20.0.20``
 - Проверяем соединение через telnet
 ![Alt Text](src/pictures/62.png)
 ![Alt Text](src/pictures/63.png)
