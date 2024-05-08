@@ -251,7 +251,7 @@
 
 - Пользуемся Remote TCP forwarding c ws11 до ws22, чтобы получить доступ к веб-серверу на ws22 с ws11 (прописываем именно с ws22)
 - Образец команды: ``ssh -R [REMOTE:]REMOTE_PORT:DESTINATION:DESTINATION_PORT [USER@]SSH_SERVER``
--Проверяем соединение через telnet
+- Проверяем соединение через telnet
 ![Alt Text](src/pictures/64.png)
 ![Alt Text](src/pictures/65.png)
 
